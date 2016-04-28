@@ -12,8 +12,10 @@ public class PlayerCharacter : MonoBehaviour {
 	GUIStyle text = new GUIStyle();//Style for HP
 	private AudioSource source;//Sound effect source
 	public AudioClip onHit;//attaches audio component to player
+	public AudioClip BGmusic;//attaches audio component to player
 	private float volL = .5f;//Lower bound for sounds
 	private float volH = 1f;//Higher bound for sounds
+	private float volM = 0.75f;//Higher bound for sounds
 	private bool playerHit = false; //If player is hit
 
 
@@ -22,6 +24,7 @@ public class PlayerCharacter : MonoBehaviour {
 		InvokeRepeating("decreaseHealthOverTime", 30f, 30f);
 		text.fontSize = 20;
 		text.normal.textColor = Color.white;
+		source.PlayOneShot (BGmusic, volM);// Plays sound affect every collision with zombie
 	}
 
 	public void Hurt(int damage) {

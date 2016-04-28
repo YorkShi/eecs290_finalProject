@@ -3736,6 +3736,7 @@ MonoBehaviour:
   restartDialog: {fileID: 1800200834}
   HealthPack: {fileID: 1880170091}
   onHit: {fileID: 8300000, guid: 5c36dc40bb704a14bb992af7647e5e66, type: 3}
+  BGmusic: {fileID: 8300000, guid: 88f3d71f12968a84aa7c331ffe2c34a2, type: 3}
 --- !u!114 &446699800
 MonoBehaviour:
   m_ObjectHideFlags: 0

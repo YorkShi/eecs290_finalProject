@@ -33,7 +33,7 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	public void decreaseHealthOverTime() {
-		subtractHealth(10f);
+		subtractHealth(5f);
 	}
 
 	public float getHealth() {

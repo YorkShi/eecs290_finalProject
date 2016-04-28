@@ -8,6 +8,7 @@ public class PlayerCharacter : MonoBehaviour {
 	private float health;
 	public Image healthBar;
 	public GameObject restartDialog;
+	public GameObject HealthPack;
 	GUIStyle text = new GUIStyle();//Style for HP
 	private AudioSource source;//Sound effect source
 	public AudioClip onHit;//attaches audio component to player
@@ -77,9 +78,9 @@ public class PlayerCharacter : MonoBehaviour {
 				StartCoroutine(onHitWait(2));
 			}
 		}
-		else if (hit.gameObject.CompareTag("HealthPack")) { // collision with Health Pack
+		else if (hit.gameObject.CompareTag("FirstAid")) { // collision with Health Pack
 			DestroyObject (hit.gameObject);
-			addHealth (50f);
+			addHealth (20f);
 		}
 
 		else if (hit.gameObject.CompareTag("SafeHouse")) { // collision with SafeHouse
